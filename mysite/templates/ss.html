@@ -1,0 +1,101 @@
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-xtra-blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}"
+
+
+
+
+
+
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mask.min.js' %}"></script>
+    <script src="{% static 'js/mask.js' %}"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="js/templatemo-script.js"></script>
+
+
+
+    {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-xtra-blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+    
+    <title>{% block title %} TodoApp {% endblock title  %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">TodoApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+            
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Redes Sociais</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="">Linkedin</a>
+                    <a class="dropdown-item" href="">Listar Categorias</a>
+                    <a class="dropdown-item" href="">Adicionar Tarefa</a>
+                    <a class="dropdown-item" href="">Listar Tarefas</a>
+                </div>
+            </li>      
+          </ul>
+          <form class="form-inline my-2 my-md-0" style="margin-right:10px">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="margin-right:10px">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            
+          </form>
+          
+            <ul class="navbar-nav "> 
+              
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="">Perfil</a>
+                      <a class="dropdown-item" href="">Trocar senha</a>
+                      <a class="dropdown-item" href="">Outras informações</a>
+                      <a class="dropdown-item" href="">Sair</a>
+                  </div>
+              </li>
+            </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+    {% block body  %}
+       
+    {% endblock body %}
+<footer id="footer">
+    <ul class="icons">
+    <li><a href="https://twitter.com/adilmar" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com/Adilmar" class="icon fa-github"><span class="label">Github</span></a></li>
+    <li><a href="https://www.facebook.com/adilmarcoelho" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+    <li><a href="https://instagram.com/wandszera" class="icon fa-instagram"><span class="label">Facebook</span></a></li>
+    <li><a href="/cdn-cgi/l/email-protection#cfaea4aea1aaa7aebd8fa8a2aea6a3e1aca0a2" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+    <li>&copy; Wanderson Souza Araújo - <span id="ano"></span></li>
+    </ul>
+    </footer>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mask.min.js' %}"></script>
+    <script src="{% static 'js/mask.js' %}"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="js/templatemo-script.js"></script>
+
+</html>

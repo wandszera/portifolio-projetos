@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title %}
+    Lista de Tarefas - {{ block.super }}
+{% endblock title %}
+
+
+{% block body %}
+    <div class="container">
+    <h1> Tarefas </h1>
+    
+            <div class="row tm-row">
+                
+                {% for projeto in projetos %}
+                    <article class="col-12 col-md-6 tm-post">
+                    <hr class="tm-hr-primary">
+                    <a href="post.html" class="effect-lily tm-post-link tm-pt-30">
+                        <div class="tm-post-link-inner">
+                            <img src="{{ projeto.photo.url }}" alt="Generic placeholder image" class="img-fluid">                            
+                        </div>
+                        <span class="position-absolute tm-new-badge">New</span>
+                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">{{projeto.name}}</h2>
+                    </a>                    
+                    <p class="tm-pt-30">
+                        {{projeto.description}}
+                    </p>
+                    <div class="d-flex justify-content-between tm-pt-45">
+                        <span class="tm-color-primary">Travel . Events</span>
+                        <span class="tm-color-primary">June 24, 2020</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span>36 comments</span>
+                        <span>by Admin Nat</span>
+                    </div>
+                </article>
+                {% endfor %}
+                    
+                
+            </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tarefa</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Data Final</th>
+                            <th scope="col">Prioridade</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for projeto in projetos %}
+                            <tr>
+                                <th scope="row">{{ projeto.id }}</th>
+                                <td>{{ projeto.name }}</td>
+                                <td>{{ projeto.description }}</td>
+                                <td><img src="{{ projeto.photo.url}}"  alt="Generic placeholder image" width="150" height="150"></td>
+
+                                <td>
+                                    <a href="" class="btn btn-primary btn-sm">Editar</a>
+                                    <a href="" class="btn btn-danger btn-sm confirm-delete" data-toggle="modal", data-target="#ConfirmDeleteModal" id="deleteButton-{{ category.id }}">Excluir</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                  </table>
+                    </tbody>
+                  </table>
+                
+
+            </div>
+        </div>
+        {% include 'partials/confirm_delete_modal.html' %}
+    </div>
+
+
+{% endblock body %}
